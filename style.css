@@ -394,3 +394,292 @@ input, textarea{
     padding:0 20px;
   }
 }
+
+
+/* logo */
+/* .logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+} */
+
+/* new */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+
+  /* Slightly rounded corners */
+  border-radius: 6px;
+
+  /* Very subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================= */
+/*       WELCOME POPUP           */
+/* ============================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(20, 10, 40, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+
+  backdrop-filter: blur(3px);
+}
+
+
+/* Popup Box */
+
+.popup-box {
+  position: relative;
+
+  width: 600px;
+  max-width: 90%;
+
+  min-height: 350px;
+
+  background: #e8f3f7;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 40px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18);
+
+  animation: popupShow 0.35s ease;
+}
+
+
+/* Left Image */
+
+.popup-image {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 150px;
+
+    display: block;
+}
+
+
+/* Right Content */
+
+.popup-content {
+  width: 50%;
+
+  padding-left: 20px;
+}
+
+.popup-content h2 {
+  font-size: 28px;
+
+  font-weight: 400;
+
+  color: #444;
+
+  margin: 0 0 10px;
+}
+
+.popup-content p {
+  font-size: 14px;
+
+  color: #555;
+
+  margin-bottom: 20px;
+}
+
+
+/* Button */
+
+.popup-btn {
+  display: inline-block;
+
+  padding: 9px 45px;
+
+  background: #6c5ce7;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 25px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+
+  transition: 0.2s;
+}
+
+.popup-btn:hover {
+  transform: translateY(-2px);
+
+  background: #5b4bd5;
+}
+
+
+/* Close Button */
+
+.popup-close {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f7f7f7;
+
+  color: #555;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-close:hover {
+  background: #ddd;
+}
+
+
+/* Animation */
+
+@keyframes popupShow {
+
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+
+/* =========================
+   POPUP OVERLAY
+========================= */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    /* Transparent dark overlay */
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: 99999;
+}
+
+.popup-box {
+    background: rgba(232, 243, 247, 0.55);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+    
+}
+
+/* ============================= */
+/*        MOBILE DESIGN          */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  .popup-box {
+    width: 90%;
+
+    min-height: auto;
+
+    padding: 30px 20px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .popup-image {
+    width: 100%;
+  }
+
+  .popup-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .popup-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    margin-top: 15px;
+  }
+
+  .popup-content h2 {
+    font-size: 24px;
+
+  }
+
+}

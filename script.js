@@ -51,3 +51,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// =============================
+//       WELCOME POPUP
+// =============================
+
+const welcomePopup = document.getElementById("welcomePopup");
+const popupClose = document.getElementById("popupClose");
+const internshipBtn = document.querySelector(".popup-btn");
+
+
+// Show popup every time page loads / refreshes
+window.addEventListener("load", function () {
+    welcomePopup.style.display = "flex";
+});
+
+
+// Close button (X)
+popupClose.addEventListener("click", function () {
+    welcomePopup.style.display = "none";
+});
+
+
+// Internship button
+internshipBtn.addEventListener("click", function () {
+    welcomePopup.style.display = "none";
+});
