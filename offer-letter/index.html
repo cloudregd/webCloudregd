@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offer Letter | Cloud Regd</title>
+
+  <link rel="icon" type="image/png" href="../images/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../certificate/certificate.css">
+  <link rel="stylesheet" href="offer-letter.css">
+</head>
+<body>
+
+  <header class="cert-site-header">
+    <a href="../index.html" class="logo">
+      <img src="../images/icon.png" alt="Cloud Regd Logo">
+      Cloud Regd
+    </a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../index.html#internships">Internships</a>
+      <a href="../certificate/">Certificate</a>
+      <a href="index.html">Offer Letter</a>
+    </nav>
+  </header>
+
+  <main class="cert-page">
+    <div class="cert-container">
+
+      <div class="cert-header">
+        <h2>Offer Letter</h2>
+        <p>Enter your offer ID to view and download your internship offer letter.</p>
+      </div>
+
+      <form class="cert-lookup" id="lookupForm">
+        <label for="offerIdInput">Offer ID</label>
+        <div class="cert-lookup-row">
+          <input
+            type="text"
+            id="offerIdInput"
+            placeholder="e.g. CR-20XX-001"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button type="submit">
+            <i class="fas fa-search"></i> View Offer Letter
+          </button>
+        </div>
+        <div class="cert-error" id="offerError"></div>
+      </form>
+
+      <div class="cert-actions" id="offerActions">
+        <button type="button" class="download-btn" id="downloadBtn">
+          <i class="fas fa-download"></i> Download PDF
+        </button>
+        <a href="index.html" class="back-link">
+          <i class="fas fa-redo"></i> Look Up Another
+        </a>
+      </div>
+
+      <div class="cert-preview-wrap" id="offerPreviewWrap">
+        <div class="offer-letter" id="offerLetterTemplate">
+
+          <div class="ol-logos">
+            <img src="../images/certificate logo.png" alt="Cloud Regd" class="ol-logo ol-logo-cloud">
+            <img src="../images/msme logo .png" alt="MSME Business Forum" class="ol-logo ol-logo-msme">
+          </div>
+
+          <div class="ol-company">Cloud Regd</div>
+          <div class="ol-contact">
+            <span><i class="fas fa-envelope"></i> info@cloudregd.com</span>
+            <span><i class="fas fa-globe"></i> <a href="https://www.cloudregd.com">www.cloudregd.com</a></span>
+          </div>
+          <h1 class="ol-title">Internship Offer Letter</h1>
+
+          <div class="ol-meta">
+            <p class="ol-greeting">Dear <strong id="olName">—</strong>,</p>
+            <div class="ol-offer-id">Offer ID: <span id="olOfferId">—</span></div>
+          </div>
+
+          <p class="ol-date" id="olDate">—</p>
+
+          <div class="ol-body">
+            <p>
+              We are delighted to welcome you for the internship of
+              <strong id="olInternship">—</strong>
+              in our fellowship. This internship is observed by Cloud Regd as being
+              a learning opportunity for you, spanning a duration of
+              <strong id="olDuration">—</strong>.
+            </p>
+            <p>
+              In essence, your internship will embrace orientation and give emphasis on
+              learning new skills with a deeper understanding of concepts through
+              hands-on application of the knowledge you gain as an intern. Our team is
+              confident that you will acknowledge your obligation to perform all work
+              allocated to you to the best of your ability within lawful and reasonable
+              direction given to you.
+            </p>
+            <p>
+              We look forward to a worthwhile and fruitful association which will make
+              you equipped for future projects. Wishing you the most enjoyable and truly
+              meaningful internship program experience.
+            </p>
+          </div>
+
+          <div class="ol-footer">
+            <p class="ol-thanks">Thank you</p>
+            <div class="ol-sign-block">
+              <div class="ol-sign-left">
+                <p class="ol-team">Team Cloud Regd</p>
+                <img src="../images/singnature.png" alt="Sunil Singh signature" class="ol-signature-img">
+                <div class="ol-sign-name">Sunil Singh</div>
+                <div class="ol-sign-role">Program Coordinator, Cloud Regd</div>
+              </div>
+              <img src="../images/stamp.png" alt="Cloud Regd stamp" class="ol-stamp">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="offer-letters-data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="offer-letter.js"></script>
+</body>
+</html>
