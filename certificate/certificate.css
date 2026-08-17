@@ -186,12 +186,29 @@
   pointer-events: none;
 }
 
-.cert-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
+.cert-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 4px;
+}
+
+.cert-logo {
+  object-fit: contain;
+}
+
+.cert-logo-cloud {
+  height: 90px;
+  width: auto;
+  max-width: 110px;
+}
+
+.cert-logo-msme {
+  height: 100px;
+  width: auto;
+  max-width: 130px;
 }
 
 .cert-org {
@@ -280,7 +297,7 @@
 
 .cert-signatures {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   margin-top: 24px;
 }
@@ -294,6 +311,15 @@
   width: 160px;
   border-top: 2px solid #1e3a5f;
   margin: 0 auto 8px;
+}
+
+.cert-signature-img {
+  display: block;
+  height: 52px;
+  width: auto;
+  max-width: 180px;
+  margin: 0 auto 6px;
+  object-fit: contain;
 }
 
 .cert-signature .name {
@@ -355,6 +381,16 @@
     padding: 30px 24px;
     aspect-ratio: auto;
     min-height: 520px;
+  }
+
+  .cert-logo-cloud {
+    height: 60px;
+    max-width: 72px;
+  }
+
+  .cert-logo-msme {
+    height: 68px;
+    max-width: 88px;
   }
 
   .cert-title {
