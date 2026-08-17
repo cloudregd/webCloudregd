@@ -13,7 +13,7 @@ const CERTIFICATES = {
   "CR-2024-001": {
     name: "Rahul Sharma",
     department: "Web Development",
-    internshipName: "Full Stack Web Development Internship",
+    internshipName: "Internship",
     duration: "8 Weeks",
     issueDate: "January 15, 2025",
     certificateId: "CR-2024-001",
